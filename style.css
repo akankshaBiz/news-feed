@@ -1,0 +1,54 @@
+.newsContent{
+	padding: 5%;
+}
+.card{
+	padding: 2%;
+	margin: 2%;
+	width: 40% !important;
+	height: 55vh !important;
+	font-weight: 600;
+	font-size: large;
+	line-height: initial;
+	box-shadow: 2px 2px 2px grey;  
+    transition: all 1s ease;
+	 transform-style: preserve-3d;
+	 backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 600;
+}
+.carousel-inner > .item > img{
+	width: 80vw;
+	margin:  auto;
+	box-shadow: 2px 2px 2px 4px grey;
+}
+.carousel-inner > .item {
+	padding: 0px;
+	background-color: azure;
+	height: 60vh;
+}
+.carousel-caption{
+	height: 150px;
+	font-size: xx-large;
+	font-weight: 700;
+	color: #f3e420 !important;
+	text-shadow: 3px 1px black;
+}
+.front{
+	transition: all 1s ease;
+	 transform-style: preserve-3d;
+	 backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.front:hover{
+	transform: rotateY(180deg);
+	 -webkit-transform: rotateY(180deg);
+}
+.back{
+	margin: 5%;
+	top: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+	 -webkit-transform: rotateY(180deg);
+	 transition: all 1s ease;
+	 transform-style: preserve-3d;
+}

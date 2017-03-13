@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+</head>
+<body ng-app="myApp">
+	<div class="container" ng-controller="myCtrl">
+		<div class="newsBanner">
+			<div id="myslide" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myslide" data-slide-to="0" class="active"></li>
+					<li data-target="#myslide" data-slide-to="1" ></li>
+					<li data-target="#myslide" data-slide-to="2" ></li>
+					<li data-target="#myslide" data-slide-to="3" ></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active" >
+						<img src="{{slider[0].urlToImage}}" class="slideImg" alt="">
+						<div class="carousel-caption">{{slider[0].title}}</div>
+					</div>
+					<div class="item">
+						<img src="{{slider[1].urlToImage}}" alt="" class="slideImg">
+						<div class="carousel-caption">{{slider[1].title}}</div>
+					</div>
+					<div class="item">
+						<img src="{{slider[2].urlToImage}}" alt="" class="slideImg">
+						<div class="carousel-caption">{{slider[2].title}}</div>
+					</div>
+					<div class="item">
+						<img src="{{slider[3].urlToImage}}" alt="" class="slideImg">
+						<div class="carousel-caption">{{slider[3].title}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="newsContent">
+			<div class="source text-center"><h2>THE HINDU</h2></div>
+			<div class="card col-sm-4" ng-repeat="news in newsArr">
+				<div class="front">
+					<img src="{{news.urlToImage}}" alt="" class="img-responsive newsImg">
+					<div class="back">
+					Description: {{news.description}}
+					</div>
+				</div>
+				<div><a href="{{news.url}}">{{news.title}}</a></div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
